@@ -1,18 +1,18 @@
 function welcomePage(){
     const newH1 = document.createElement("h1");
-    newH1.textContent="Välkommen in Test!";
+    newH1.textContent="Välkommen in test!";
     document.body.appendChild(newH1);
 }
 
 function clearButton(){
     const logout = document.createElement("button");
     logout.textContent = "Logga ut!";
+    document.body.appendChild(logout);
     logout.addEventListener("click", function(){
         localStorage.removeItem("username");
         localStorage.removeItem("password");
         kollaStorage();
     });
-    document.body.appendChild(logout);
 }
 
 function addHeader1(){
