@@ -1,3 +1,6 @@
+const userName = "test";
+const passWord = "1234";
+
 function welcomePage(){
     const newH1 = document.createElement("h1");
     newH1.textContent="Välkommen in test!";
@@ -44,7 +47,7 @@ function addLoginBtn(){
     newLoginBtn.addEventListener("click", function(){
         const username = document.getElementById("username");
         const password = document.getElementById("password");
-            if (username.value == "test" && password.value =="1234"){
+            if (username.value == userName && password.value ==passWord){
                 localStorage.setItem("username", username.value);
                 localStorage.setItem("password", password.value);
                 kollaStorage();
@@ -76,7 +79,7 @@ function kollaStorage(){
     const lagratUsername = localStorage.getItem("username");
     const lagratPassword = localStorage.getItem("password");
     document.body.innerHTML="";
-    if(lagratUsername=="test" && lagratPassword=="1234"){
+    if(lagratUsername==userName && lagratPassword==passWord){
         welcomePage();
         clearButton();
     }
